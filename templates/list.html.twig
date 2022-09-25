@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+
+{% block title %} List {% endblock %}
+
+{% block content %}
+        <div class="conteneur-search d-flex justify-content-end my-3">
+        <div  class="search col-3 d-flex">
+            <input type="text" name="search" id="searchClient"  class="form-control "><button  class="btn"><i class="bi bi-search"></i></button>
+        </div>
+        </div>
+
+        <div class="container-fluid">
+        <table  class="table table-striped ">
+            <thead>
+            <tr>
+                <th scope="col">ACTION</th>
+                <th scope="col">CLIENT</th>
+                <th scope="col">MONTANT PRET</th>
+                <th scope="col">DATE DU PRET</th>
+                <th scope="col">FIN DU CONTRAT</th>
+                <th scope="col">MONTANT INTERET</th>
+                <th scope="col">POURCENTAGE</th>
+                <th scope="col">MODE DE PAIEMENT</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr >
+                <th scope="row" class="d-flex"> 
+                    <button class="btn bg-dark d-flex justify-content-center align-items-center"><i class="bi bi-eye"></i></button>
+                    <button class="btn d-flex justify-content-center align-items-center"><i class="bi bi-pencil"></i></button>
+                </th>
+                <td >client.client</td>
+                <td >client.montantPret</td>
+                <td >client.datePret</td>
+                <td >client.finContrat</td>
+                <td >client.montantInteret</td>
+                <td >client.pourcentage</td>
+                <td >client.modePayement</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <pagination-controls previousLabel="Prev"
+            nextLabel="Next"  >
+            </pagination-controls>
+        </div>
+        </div>
+
+{% endblock %}
